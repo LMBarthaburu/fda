@@ -87,6 +87,17 @@ function Buscador() {
           mt: '1rem'
         }}
       >
+        <Typography
+          component='p'
+          sx={{
+            alignSelf: 'start',
+            fontSize:'0.8rem',
+            opacity:'0.6',
+            mb:'-0.3rem'
+          }}
+        >
+          Enter the brand/generic name, the manufacturer, or both for accurate results.
+        </Typography>
         <TextField
           id="buscador-medicamento"
           label="Brand name or generic name of the medication"
