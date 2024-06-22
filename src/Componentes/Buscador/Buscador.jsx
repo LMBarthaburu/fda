@@ -26,8 +26,7 @@ function Buscador() {
     if(!drug && !manufacturer){
       return
     }
-    if(manufacturer){
-      axios.get(`https://api.fda.gov/drug/label.json?search=(openfda.generic_name:("${drug}")+OR+openfda.brand_name:("${drug}"))+AND+openfda.manufacturer_name:("${manufacturer}")&limit=1000`)
+      axios.get(`https://api.fda.gov/drug/label.json?search=(openfda.generic_name:("${drug}")+OR+openfda.brand_name:("${drug}"))+AND+(openfda.manufacturer_name:("${manufacturer}"))&limit=1000`)
       .then(res => {
         if(res.status === 200){
           setDrugArray(res.data.results)
@@ -38,19 +37,6 @@ function Buscador() {
         setDrugArray([])
         setStatus(true)
       });
-    }else{
-      axios.get(`https://api.fda.gov/drug/label.json?search=openfda.generic_name:("${drug}")+OR+openfda.brand_name:("${drug}")&limit=1000`)
-      .then(res => {
-        if(res.status === 200){
-          setDrugArray(res.data.results)
-          setStatus(true)
-        }
-      })
-      .catch(error => {
-        setDrugArray([])
-        setStatus(true)
-      });
-    }
   }
 
   const handleClean=()=>{
