@@ -61,16 +61,16 @@ function ProductoInfo() {
             <Typography
               component='h1'
               sx={{
-                fontSize:{ xs:'1.8rem', md:'3rem' },
+                fontSize:{ xs:'2.3rem', md:'3.2rem' },
                 fontWeight:'800'
               }}
             >
-              {item.openfda.brand_name.map(item=>`${item}`)}
+              {item.openfda.brand_name}
             </Typography>
             <Typography
               component='h2'
               sx={{
-                fontSize:{ xs:'1.6rem', md:'2.5rem' },
+                fontSize:{ xs:'1.6rem', md:'2.3rem' },
                 fontWeight:'800'
               }}
             >
@@ -80,7 +80,7 @@ function ProductoInfo() {
               component='h3'
               sx={{
                 overflowWrap: 'break-word',
-                fontSize:{ xs:'1.4rem', md:'1.8rem' },
+                fontSize:{ xs:'1rem', md:'1.4rem' },
                 fontWeight:'600',
                 mb:'2rem'
               }}
