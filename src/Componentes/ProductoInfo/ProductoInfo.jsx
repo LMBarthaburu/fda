@@ -79,6 +79,7 @@ function ProductoInfo() {
             <Typography
               component='h3'
               sx={{
+                overflowWrap: 'break-word',
                 fontSize:{ xs:'1.4rem', md:'1.8rem' },
                 fontWeight:'600',
                 mb:'2rem'
